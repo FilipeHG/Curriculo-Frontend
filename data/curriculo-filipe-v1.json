@@ -1,0 +1,481 @@
+{
+  "profile": {
+    "name": "Filipe Henrique Gonçalves",
+    "designation": "Senior Full Stack Engineer",
+    "photo": "assets/images/foto-perfil-01.png",
+    "photoAlt": "Filipe Henrique"
+  },
+  "contact": {
+    "iconClass": "fa-solid fa-user-tag text-warning",
+    "items": [
+      {
+        "key": "location",
+        "iconClass": "fa-solid fa-location-dot text-warning"
+      },
+      {
+        "key": "phone",
+        "iconClass": "fa-brands fa-whatsapp text-success",
+        "href": "https://wa.me/+5511969532602",
+        "title": "WhatsApp",
+        "target": "_blank",
+        "value": "+55 (11) 96953-2602"
+      },
+      {
+        "key": "email",
+        "iconClass": "fa-solid fa-envelope text-danger",
+        "href": "mailto:filipeh.goncalves@gmail.com",
+        "title": "E-mail",
+        "value": "filipeh.goncalves@gmail.com"
+      },
+      {
+        "key": "linkedin",
+        "iconClass": "fa-brands fa-linkedin text-info",
+        "href": "https://www.linkedin.com/in/filipehg/",
+        "title": "LinkedIn",
+        "target": "_blank",
+        "value": "linkedin.com/in/filipehg"
+      },
+      {
+        "key": "github",
+        "iconClass": "fa-brands fa-square-github text-dark bg-white bg-opacity-75 rounded-1",
+        "href": "https://github.com/FilipeHG",
+        "title": "GitHub",
+        "target": "_blank",
+        "value": "github.com/FilipeHG"
+      }
+    ]
+  },
+  "languages": {
+    "iconClass": "fa-solid fa-language text-warning"
+  },
+  "translations": {
+    "pt": {
+      "meta": {
+        "title": "Filipe Henrique Gonçalves - Senior Full Stack Engineer"
+      },
+      "ui": {
+        "exportPdf": "Exportar PDF"
+      },
+      "contact": {
+        "title": "Contato e Perfis",
+        "location": "Brasil (Disponível 100% Remoto)",
+        "phone": "+55 (11) 96953-2602",
+        "email": "filipeh.goncalves@gmail.com",
+        "linkedin": "linkedin.com/in/filipehg",
+        "github": "github.com/FilipeHG"
+      },
+      "languages": {
+        "title": "Idiomas",
+        "items": [
+          {
+            "name": "Português (Brasil)",
+            "level": "Nativo (C2)"
+          },
+          {
+            "name": "Inglês",
+            "level": "Intermediário Técnico (B1)"
+          },
+          {
+            "name": "Espanhol",
+            "level": "Intermediário (B1)"
+          }
+        ]
+      },
+      "summary": {
+        "title": "Resumo Profissional",
+        "iconClass": "fa-solid fa-user-tie text-primary",
+        "paragraphs": [
+          "Desenvolvedor Full Stack Sênior com <strong>16 anos de experiência</strong> na construção de aplicações web de alta performance, sistemas distribuídos e soluções cloud-native. Atuo em todo o ciclo de engenharia de software, do backend ao frontend, com forte experiência em arquiteturas modernas, <strong>microservices</strong>, APIs e integrações em larga escala.",
+          "Tenho vivência em ambientes que exigem escalabilidade, confiabilidade e excelência técnica, atuando com práticas de arquitetura, <strong>observabilidade</strong>, automação, testes e pipelines CI/CD. Nos últimos anos, venho adotando abordagens <strong>IA-First</strong>, incorporando inteligência artificial em diferentes etapas do fluxo de desenvolvimento (desde testes e automação até deploys, monitoramento e suporte à tomada de decisão técnica), com foco em aumentar produtividade, qualidade e previsibilidade das entregas.",
+          "Minha trajetória inclui projetos desenvolvidos em múltiplas plataformas e ecossistemas tecnológicos, com destaque para <strong>Java, .NET, AWS e Azure</strong>. Também já assumi posições de liderança como <strong>Tech Lead</strong>, conduzindo workshops, treinamentos e apoiando equipes em decisões arquiteturais e estratégicas. Valorizo colaboração, código limpo, cultura de testes e boas práticas de arquitetura, sempre com foco na construção de soluções robustas, escaláveis e sustentáveis para negócios e equipes de alto desempenho."
+        ]
+      },
+      "skills": {
+        "title": "Habilidades Técnicas",
+        "iconClass": "fa-solid fa-laptop-code text-success",
+        "categories": [
+          {
+            "title": "Languages, Frameworks & APIs",
+            "pillClass": "pill-blue",
+            "items": ["C#", ".NET 8+", "ASP.NET Core", "Entity Framework Core", "Dapper", "Java", "Java EE", "Java 17–25", "Spring Boot", "Quarkus", "Hibernate ORM", "JPA", "MyBatis", "Jdbi", "Spring JDBC Template", "Node.js", "TypeScript", "JavaScript", "Angular", "React", "REST APIs", "GraphQL", "RPC/gRPC", "HTML5", "CSS3", "Bootstrap", "jQuery"]
+          },
+          {
+            "title": "Databases, Data Engineering & Distributed Processing",
+            "pillClass": "pill-emerald",
+            "items": ["SQL Server", "PostgreSQL", "MySQL", "Oracle", "MongoDB", "RavenDB", "Redis", "Supabase", "Azure Databricks", "Data Lake", "Delta Lake", "Apache Spark", "Distributed Processing", "Data Pipelines"]
+          },
+          {
+            "title": "AI, LLMs & Semantic Search",
+            "pillClass": "pill-purple",
+            "items": ["Generative AI", "Large Language Models (LLMs)", "Retrieval-Augmented Generation (RAG)", "Semantic Search", "AI-First Pipelines"]
+          },
+          {
+            "title": "Cloud, Containers & Messaging",
+            "pillClass": "pill-orange",
+            "items": ["AWS", "AWS Lambda", "EC2", "ECS/ECR", "ELB", "S3", "SQS", "SNS", "CloudFormation", "Amplify", "Microsoft Azure", "Azure Functions", "App Services", "Containers", "Blob Storage", "Queue Storage", "Application Insights", "Docker", "Kubernetes", "RabbitMQ"]
+          },
+          {
+            "title": "Software Architecture & Engineering Practices",
+            "pillClass": "pill-rose",
+            "items": ["Clean Architecture", "Hexagonal Architecture", "Onion Architecture", "Layered Architecture", "Domain-Driven Design (DDD)", "SOLID Principles", "Backend for Frontend (BFF)", "Microservices", "Distributed Systems", "RESTful APIs Design", "Unit Testing", "Integration Testing", "JUnit", "Mockito", "CI/CD Pipelines", "Jenkins", "Maven", "Gradle", "Prometheus", "Grafana"]
+          },
+          {
+            "title": "Developer Tools & Productivity",
+            "pillClass": "pill-blue",
+            "items": ["Cursor", "Antigravity", "Git", "CI/CD Pipelines", "Miro"]
+          },
+          {
+            "title": "Agile Methodologies",
+            "pillClass": "pill-purple",
+            "items": ["Scrum", "Kanban"]
+          },
+          {
+            "title": "CMS Platforms",
+            "pillClass": "pill-emerald",
+            "items": ["Umbraco CMS"]
+          }
+        ]
+      },
+      "experience": {
+        "title": "Experiência Profissional",
+        "iconClass": "fa-solid fa-briefcase text-danger",
+        "jobs": [
+          {
+            "company": "Systax",
+            "period": "2022 / 2026",
+            "role": "Desenvolvedor Full Stack Sênior",
+            "description": [
+              "Atuação na concepção de <strong>RAG para busca semântica</strong>, integrando LLMs e IA generativa para detecção de anomalias, análise preditiva e insights operacionais.",
+              "Engenharia de processamento distribuído de alto volume com <strong>Java 21, Spring Boot, .NET 8, Azure Databricks, Spark e Delta Lake</strong> integrados ao <strong>Data Lake</strong>.",
+              "Desenvolvimento e sustentação de ecossistema baseado em microsserviços, utilizando comunicação assíncrona de alta performance via <strong>RPC/gRPC</strong>, Webhooks e Workers."
+            ],
+            "tags": ["Java", "Spring Boot", "C# .NET 8+", "Node.js", "PostgreSQL", "MongoDB", "Redis", "AWS", "Azure Service Bus", "Docker/K8s", "Angular", "React", "Miro/Cursor"]
+          },
+          {
+            "company": "Hammer - Consult",
+            "period": "2021 / 2023",
+            "role": "Desenvolvedor Full Stack Sênior",
+            "description": [
+              "Desenvolvimento e manutenção em microsserviços e APIs RESTful de alta disponibilidade.",
+              "Modelagem e otimização de bancos NoSQL e relacionais com uso de ORMs e bibliotecas de acesso a dados como <strong>Hibernate, JPA, MyBatis, Jdbi, Spring JDBC Template</strong> para Java, <strong>Dapper, Entity Framework</strong> para .NET, e <strong>Prisma e TypeORM</strong> para Node.js.",
+              "Integração de soluções em diferentes ecossistemas com Java, .NET e Node.js, aplicando boas práticas de persistência e performance.",
+              "Orquestração de rotinas assíncronas e serverless com AWS Lambda, Workers e Firebase Cloud."
+            ],
+            "tags": ["Java", "C# ASP.NET Core", "Node.js", "SQL Server", "PostgreSQL", "MySQL", "MongoDB", "AWS Lambda", "Docker", "React"]
+          },
+          {
+            "company": "Férias & Co",
+            "period": "2019 / 2021",
+            "role": "Desenvolvedor Full Stack Sênior",
+            "description": [
+              "Construção e sustentação da plataforma core de benefícios de viagens.",
+              "Arquitetura de integrações modernas aplicando o padrão <strong>BFF (Backend For Frontend) através de NestJS e GraphQL</strong>.",
+              "Gestão de infraestrutura cloud e deploy automatizado em AWS (Lambda, EC2, ECR, S3) com orquestração via Kubernetes."
+            ],
+            "tags": ["C# ASP.NET Core", "Node.js", "NestJS/GraphQL", "MongoDB", "Redis", "AWS", "Docker/K8s", "Angular"]
+          },
+          {
+            "company": "Linx",
+            "period": "2017 / 2019",
+            "role": "Desenvolvedor Sênior",
+            "description": "Desenvolvimento, otimização e manutenção de soluções de software voltadas ao ecossistema varejista, atuando ponta a ponta na stack de engenharia.",
+            "tags": ["C# ASP.NET Core", "SQL Server", "Entity Framework", "JavaScript / jQuery", "AngularJS", "Bootstrap"]
+          },
+          {
+            "company": "Sebrae - SP",
+            "period": "2016 / 2017",
+            "role": "Analista de Desenvolvimento .NET Sênior",
+            "description": "Análise, sustentação e evolução de sistemas internos e portais de atendimento ao empreendedor.",
+            "tags": ["C#", "ASP.NET", "Entity Framework", "SQL Server"]
+          },
+          {
+            "company": "Henrys",
+            "period": "2015 / 2016",
+            "role": "Arquiteto de Software",
+            "description": "Definição de base arquitetural, padrões de código via Code First Migrations e estruturação de plataformas baseadas em gerenciadores de conteúdo.",
+            "tags": ["C# ASP.NET", "Entity Framework", "SQL Server", "Umbraco CMS", "HTML5/CSS3/JS", "Draw.io"]
+          },
+          {
+            "company": "Envision",
+            "period": "2012 / 2015",
+            "role": "Desenvolvedor Backend / Especialista Umbraco",
+            "description": "Desenvolvimento de portais corporativos de alta customização, modelagem de dados e implementação de CMS.",
+            "tags": ["C# ASP.NET", "Entity Framework", "SQL Server", "Umbraco", "jQuery"]
+          },
+          {
+            "company": "Grupo TV1",
+            "period": "2008 / 2012",
+            "role": "Desenvolvedor Backend / Desenvolvedor Frontend",
+            "description": "Construção de aplicações web e interfaces dinâmicas para grandes contas publicitárias, integrando múltiplos bancos de dados transacionais.",
+            "tags": ["C# ASP.NET", "SQL Server", "Oracle", "MySQL", "Umbraco", "HTML/CSS/JS"]
+          }
+        ]
+      },
+      "education": {
+        "title": "Formação Acadêmica",
+        "iconClass": "fa-solid fa-graduation-cap text-warning",
+        "items": [
+          {
+            "title": "Pós em Arquitetura de Software, Ciência de Dados e Segurança Cibernética",
+            "meta": "PUCPR - Pontifícia Universidade Católica do Paraná"
+          },
+          {
+            "title": "Bacharelado em Sistemas de Informação",
+            "meta": "Faculdade ENIAC",
+            "href": "assets/docs/diploma-bacharel-si-eniac.pdf",
+            "linkTitle": "Diploma Graduação"
+          },
+          {
+            "title": "Escola Técnica de Ensino Médio em TI",
+            "meta": "Colégio Presidente Kennedy"
+          }
+        ]
+      },
+      "certifications": {
+        "title": "Certificações",
+        "iconClass": "fa-solid fa-award text-success",
+        "items": [
+          "Microsoft Certified Professional (MCP)",
+          "Microsoft Certified Professional Developer (MCPD)",
+          "Microsoft Certified Technology Specialist (MCTS)"
+        ]
+      },
+      "courses": {
+        "title": "Cursos & Educação Continuada",
+        "iconClass": "fa-solid fa-book-open text-info",
+        "items": [
+          {
+            "title": "Microsoft Virtual Academy (MVA)",
+            "meta": "C#, Desenvolvimento de Software, HTML5, JavaScript e CSS3"
+          },
+          {
+            "title": "Especialização em CMS",
+            "meta": "Udemy – Curso Avançado de Umbraco"
+          },
+          {
+            "title": "Língua Inglesa",
+            "meta": "CCBEU – Treinamento e Imersão"
+          },
+          {
+            "title": "Plataformas de Atualização",
+            "meta": "Alura, DIO, PUCRS, PUCPR e FIA"
+          }
+        ]
+      }
+    },
+    "en": {
+      "meta": {
+        "title": "Filipe Henrique Gonçalves - Senior Full Stack Engineer"
+      },
+      "ui": {
+        "exportPdf": "Export PDF"
+      },
+      "contact": {
+        "title": "Contact and Profiles",
+        "location": "Brazil (Available 100% Remotely)",
+        "phone": "+55 (11) 96953-2602",
+        "email": "filipeh.goncalves@gmail.com",
+        "linkedin": "linkedin.com/in/filipehg",
+        "github": "github.com/FilipeHG"
+      },
+      "languages": {
+        "title": "Languages",
+        "items": [
+          {
+            "name": "Portuguese (Brazil)",
+            "level": "Native (C2)"
+          },
+          {
+            "name": "English",
+            "level": "Technical Intermediate (B1)"
+          },
+          {
+            "name": "Spanish",
+            "level": "Intermediate (B1)"
+          }
+        ]
+      },
+      "summary": {
+        "title": "Professional Summary",
+        "iconClass": "fa-solid fa-user-tie text-primary",
+        "paragraphs": [
+          "Senior Full Stack Engineer with <strong>16 years of experience</strong> building high-performance web applications, distributed systems, and cloud-native solutions. I work across the full software engineering lifecycle, from backend to frontend, with strong experience in modern architectures, <strong>microservices</strong>, APIs, and large-scale integrations.",
+          "I have hands-on experience in environments that require scalability, reliability, and technical excellence, working with architecture practices, <strong>observability</strong>, automation, testing, and CI/CD pipelines. In recent years, I have been adopting <strong>AI-First</strong> approaches, incorporating artificial intelligence into different stages of the development workflow, from testing and automation to deployments, monitoring, and technical decision support, with a focus on increasing productivity, quality, and delivery predictability.",
+          "My background includes projects delivered across multiple platforms and technology ecosystems, especially <strong>Java, .NET, AWS, and Azure</strong>. I have also held leadership responsibilities as a <strong>Tech Lead</strong>, facilitating workshops and training sessions while supporting teams in architectural and strategic decisions. I value collaboration, clean code, a testing culture, and sound architectural practices, always focused on building robust, scalable, and sustainable solutions for high-performing businesses and teams."
+        ]
+      },
+      "skills": {
+        "title": "Technical Skills",
+        "iconClass": "fa-solid fa-laptop-code text-success",
+        "categories": [
+          {
+            "title": "Languages, Frameworks & APIs",
+            "pillClass": "pill-blue",
+            "items": ["C#", ".NET 8+", "ASP.NET Core", "Entity Framework Core", "Dapper", "Java", "Java EE", "Java 17–25", "Spring Boot", "Quarkus", "Hibernate ORM", "JPA", "MyBatis", "Jdbi", "Spring JDBC Template", "Node.js", "TypeScript", "JavaScript", "Angular", "React", "REST APIs", "GraphQL", "RPC/gRPC", "HTML5", "CSS3", "Bootstrap", "jQuery"]
+          },
+          {
+            "title": "Databases, Data Engineering & Distributed Processing",
+            "pillClass": "pill-emerald",
+            "items": ["SQL Server", "PostgreSQL", "MySQL", "Oracle", "MongoDB", "RavenDB", "Redis", "Supabase", "Azure Databricks", "Data Lake", "Delta Lake", "Apache Spark", "Distributed Processing", "Data Pipelines"]
+          },
+          {
+            "title": "AI, LLMs & Semantic Search",
+            "pillClass": "pill-purple",
+            "items": ["Generative AI", "Large Language Models (LLMs)", "Retrieval-Augmented Generation (RAG)", "Semantic Search", "AI-First Pipelines"]
+          },
+          {
+            "title": "Cloud, Containers & Messaging",
+            "pillClass": "pill-orange",
+            "items": ["AWS", "AWS Lambda", "EC2", "ECS/ECR", "ELB", "S3", "SQS", "SNS", "CloudFormation", "Amplify", "Microsoft Azure", "Azure Functions", "App Services", "Containers", "Blob Storage", "Queue Storage", "Application Insights", "Docker", "Kubernetes", "RabbitMQ"]
+          },
+          {
+            "title": "Software Architecture & Engineering Practices",
+            "pillClass": "pill-rose",
+            "items": ["Clean Architecture", "Hexagonal Architecture", "Onion Architecture", "Layered Architecture", "Domain-Driven Design (DDD)", "SOLID Principles", "Backend for Frontend (BFF)", "Microservices", "Distributed Systems", "RESTful APIs Design", "Unit Testing", "Integration Testing", "JUnit", "Mockito", "CI/CD Pipelines", "Jenkins", "Maven", "Gradle", "Prometheus", "Grafana"]
+          },
+          {
+            "title": "Developer Tools & Productivity",
+            "pillClass": "pill-blue",
+            "items": ["Cursor", "Antigravity", "Git", "CI/CD Pipelines", "Miro"]
+          },
+          {
+            "title": "Agile Methodologies",
+            "pillClass": "pill-purple",
+            "items": ["Scrum", "Kanban"]
+          },
+          {
+            "title": "CMS Platforms",
+            "pillClass": "pill-emerald",
+            "items": ["Umbraco CMS"]
+          }
+        ]
+      },
+      "experience": {
+        "title": "Professional Experience",
+        "iconClass": "fa-solid fa-briefcase text-danger",
+        "jobs": [
+          {
+            "company": "Systax",
+            "period": "2022 / 2026",
+            "role": "Senior Full Stack Developer",
+            "description": [
+              "Worked on the design of <strong>RAG for semantic search</strong>, integrating LLMs and generative AI for anomaly detection, predictive analysis, and operational insights.",
+              "Engineered high-volume distributed processing with <strong>Java 21, Spring Boot, .NET 8, Azure Databricks, Spark, and Delta Lake</strong> integrated with the <strong>Data Lake</strong>.",
+              "Developed and maintained a microservices-based ecosystem using high-performance asynchronous communication through <strong>RPC/gRPC</strong>, Webhooks, and Workers."
+            ],
+            "tags": ["Java", "Spring Boot", "C# .NET 8+", "Node.js", "PostgreSQL", "MongoDB", "Redis", "AWS", "Azure Service Bus", "Docker/K8s", "Angular", "React", "Miro/Cursor"]
+          },
+          {
+            "company": "Hammer - Consult",
+            "period": "2021 / 2023",
+            "role": "Senior Full Stack Developer",
+            "description": [
+              "Developed and maintained highly available microservices and RESTful APIs.",
+              "Modeled and optimized NoSQL and relational databases using ORMs and data access libraries such as <strong>Hibernate, JPA, MyBatis, Jdbi, Spring JDBC Template</strong> for Java, <strong>Dapper, Entity Framework</strong> for .NET, and <strong>Prisma and TypeORM</strong> for Node.js.",
+              "Integrated solutions across different ecosystems with Java, .NET, and Node.js, applying best practices in persistence and performance.",
+              "Orchestrated asynchronous and serverless routines with AWS Lambda, Workers, and Firebase Cloud."
+            ],
+            "tags": ["Java", "C# ASP.NET Core", "Node.js", "SQL Server", "PostgreSQL", "MySQL", "MongoDB", "AWS Lambda", "Docker", "React"]
+          },
+          {
+            "company": "Férias & Co",
+            "period": "2019 / 2021",
+            "role": "Senior Full Stack Developer",
+            "description": [
+              "Built and maintained the core travel benefits platform.",
+              "Architected modern integrations using the <strong>BFF (Backend for Frontend) pattern with NestJS and GraphQL</strong>.",
+              "Managed cloud infrastructure and automated deployments on AWS (Lambda, EC2, ECR, S3), orchestrated with Kubernetes."
+            ],
+            "tags": ["C# ASP.NET Core", "Node.js", "NestJS/GraphQL", "MongoDB", "Redis", "AWS", "Docker/K8s", "Angular"]
+          },
+          {
+            "company": "Linx",
+            "period": "2017 / 2019",
+            "role": "Senior Developer",
+            "description": "Developed, optimized, and maintained software solutions for the retail ecosystem, working end to end across the engineering stack.",
+            "tags": ["C# ASP.NET Core", "SQL Server", "Entity Framework", "JavaScript / jQuery", "AngularJS", "Bootstrap"]
+          },
+          {
+            "company": "Sebrae - SP",
+            "period": "2016 / 2017",
+            "role": "Senior .NET Development Analyst",
+            "description": "Analyzed, maintained, and evolved internal systems and entrepreneur service portals.",
+            "tags": ["C#", "ASP.NET", "Entity Framework", "SQL Server"]
+          },
+          {
+            "company": "Henrys",
+            "period": "2015 / 2016",
+            "role": "Software Architect",
+            "description": "Defined architectural foundations, code standards through Code First Migrations, and structured platforms based on content management systems.",
+            "tags": ["C# ASP.NET", "Entity Framework", "SQL Server", "Umbraco CMS", "HTML5/CSS3/JS", "Draw.io"]
+          },
+          {
+            "company": "Envision",
+            "period": "2012 / 2015",
+            "role": "Backend Developer / Umbraco Specialist",
+            "description": "Developed highly customized corporate portals, modeled data, and implemented CMS solutions.",
+            "tags": ["C# ASP.NET", "Entity Framework", "SQL Server", "Umbraco", "jQuery"]
+          },
+          {
+            "company": "Grupo TV1",
+            "period": "2008 / 2012",
+            "role": "Backend Developer / Frontend Developer",
+            "description": "Built web applications and dynamic interfaces for major advertising accounts, integrating multiple transactional databases.",
+            "tags": ["C# ASP.NET", "SQL Server", "Oracle", "MySQL", "Umbraco", "HTML/CSS/JS"]
+          }
+        ]
+      },
+      "education": {
+        "title": "Education",
+        "iconClass": "fa-solid fa-graduation-cap text-warning",
+        "items": [
+          {
+            "title": "Postgraduate Studies in Software Architecture, Data Science, and Cybersecurity",
+            "meta": "PUCPR - Pontifical Catholic University of Paraná"
+          },
+          {
+            "title": "Bachelor's Degree in Information Systems",
+            "meta": "Faculdade ENIAC",
+            "href": "assets/docs/diploma-bacharel-si-eniac.pdf",
+            "linkTitle": "Undergraduate Diploma"
+          },
+          {
+            "title": "Technical High School in IT",
+            "meta": "Colégio Presidente Kennedy"
+          }
+        ]
+      },
+      "certifications": {
+        "title": "Certifications",
+        "iconClass": "fa-solid fa-award text-success",
+        "items": [
+          "Microsoft Certified Professional (MCP)",
+          "Microsoft Certified Professional Developer (MCPD)",
+          "Microsoft Certified Technology Specialist (MCTS)"
+        ]
+      },
+      "courses": {
+        "title": "Courses & Continuing Education",
+        "iconClass": "fa-solid fa-book-open text-info",
+        "items": [
+          {
+            "title": "Microsoft Virtual Academy (MVA)",
+            "meta": "C#, Software Development, HTML5, JavaScript, and CSS3"
+          },
+          {
+            "title": "CMS Specialization",
+            "meta": "Udemy - Advanced Umbraco Course"
+          },
+          {
+            "title": "English Language",
+            "meta": "CCBEU - Training and Immersion"
+          },
+          {
+            "title": "Professional Development Platforms",
+            "meta": "Alura, DIO, PUCRS, PUCPR, and FIA"
+          }
+        ]
+      }
+    }
+  }
+}

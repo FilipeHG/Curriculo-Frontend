@@ -1,0 +1,864 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Filipe Henrique Gonçalves - Senior Full Stack Engineer</title>
+
+<!-- Google Fonts (Inter) & FontAwesome -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<style>
+:root {
+    --bg-body: #eef2f7;
+    --sidebar-bg: #0f172a;
+    --sidebar-gradient: linear-gradient(180deg, #0f172a 0%, #1e293b 100%);
+    --text-main: #1e293b;
+    --card-soft: rgba(255, 255, 255, 0.07);
+}
+
+body {
+    background-color: var(--bg-body);
+    font-family: 'Inter', sans-serif;
+    color: var(--text-main);
+    line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
+    margin: 0;
+    padding: 0;
+}
+
+/* Topbar de Controle (Exclusiva de Tela) */
+.topbar {
+    position: sticky;
+    top: 0;
+    z-index: 9999;
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(8px);
+    border-bottom: 1px solid #e2e8f0;
+    padding: 16px 30px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+}
+
+.btn-export {
+    background: #2563eb;
+    color: white;
+    font-weight: 600;
+    padding: 10px 24px;
+    border-radius: 8px;
+    border: none;
+    transition: all 0.2s ease;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.btn-export:hover {
+    background: #1d4ed8;
+    transform: translateY(-1px);
+}
+
+.topbar-actions {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.language-select {
+    height: 44px;
+    min-width: 132px;
+    border: 1px solid #cbd5e1;
+    border-radius: 8px;
+    background: #ffffff;
+    color: #0f172a;
+    font-weight: 600;
+    padding: 0 12px;
+}
+
+/* Container Mestre */
+.resume-wrapper {
+    max-width: 1380px;
+    margin: 35px auto;
+    background: #ffffff;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.12);
+    border-radius: 16px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: row;
+    box-sizing: border-box;
+}
+
+/* ==========================================
+   COLUNA ESQUERDA: SIDEBAR (VERSÃO TELA)
+   ========================================== */
+.sidebar {
+    width: 31%;
+    background: var(--sidebar-gradient);
+    color: #f8fafc;
+    padding: 55px 40px;
+    flex-shrink: 0;
+    box-sizing: border-box;
+}
+
+.profile-box {
+    text-align: center;
+    margin-bottom: 35px;
+}
+
+.profile-pic {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 5px solid rgba(255, 255, 255, 0.15);
+    box-shadow: 0 12px 30px rgba(0,0,0,0.4);
+}
+
+.user-name {
+    font-size: 1.72rem;
+    font-weight: 800;
+    text-align: center;
+    margin-bottom: 4px;
+    line-height: 1.2;
+    letter-spacing: -0.5px;
+}
+
+.user-designation {
+    text-align: center;
+    color: #54c4f5;
+    font-weight: 650;
+    font-size: 1.10rem;
+    margin-bottom: 40px;
+}
+
+/* Divisória do cabeçalho (Oculta na Web, ativada no PDF) */
+.header-sep {
+    display: none;
+}
+
+.contact-box {
+    margin-bottom: 30px;
+}
+
+.contact-row {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    margin-bottom: 16px;
+    font-size: 0.95rem;
+    color: #e2e8f0;
+}
+
+.contact-row i {
+    width: 20px;
+    font-size: 1.15rem;
+    text-align: center;
+}
+
+.contact-row a {
+    color: #e2e8f0;
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+.contact-row a:hover {
+    color: #38bdf8;
+}
+
+.sidebar-heading {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: #ffffff;
+    margin-bottom: 12px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.sidebar-meta-col {
+    margin-bottom: 35px;
+    margin-top: 45px;
+}
+
+.card-soft {
+    background: var(--card-soft);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 14px;
+    padding: 16px 20px;
+    font-size: 0.95rem;
+    color: #cbd5e1;
+    line-height: 1.7;
+}
+
+.card-soft strong {
+    color: #ffffff;
+}
+
+/* ==========================================
+   COLUNA DIREITA: MAIN CONTENT (TELA)
+   ========================================== */
+.main-content {
+    width: 69%;
+    padding: 60px 70px;
+    background: #ffffff;
+    box-sizing: border-box;
+}
+
+.section {
+    margin-bottom: 65px;
+}
+
+.section-title {
+    font-size: 1.55rem;
+    font-weight: 800;
+    color: var(--text-main);
+    border-bottom: 3px solid #f1f5f9;
+    padding-bottom: 14px;
+    margin-bottom: 32px;
+    display: flex;
+    align-items: center;
+    gap: 14px;
+}
+
+.summary-p {
+    font-size: 1.05rem;
+    line-height: 1.8;
+    color: #334155;
+    text-align: justify;
+    margin: 0;
+	padding: 6px 0 6px 0;
+}
+
+/* Wrappers para agrupar blocos em "Cards" no PDF */
+.skill-category-card {
+    margin-bottom: 24px;
+}
+
+.skill-category-title {
+    font-size: 0.95rem;
+    font-weight: 700;
+    text-transform: uppercase;
+	text-decoration: underline;
+    letter-spacing: 0.5px;
+    color: #64748b;
+    margin-bottom: 12px;
+}
+
+.skill-pill {
+    display: inline-block;
+    margin: 0 8px 12px 0;
+    padding: 8px 20px;
+    border-radius: 30px;
+    font-weight: 600;
+    font-size: 0.92rem;
+    transition: transform 0.15s ease;
+}
+
+.skill-pill:hover {
+    transform: translateY(-2px);
+}
+
+.pill-blue { background: #eff6ff; color: #1e40af; border: 1px solid #dbeafe; }
+.pill-orange { background: #fff7ed; color: #c2410c; border: 1px solid #ffedd5; }
+.pill-purple { background: #f5f3ff; color: #6d28d9; border: 1px solid #ede9fe; }
+.pill-emerald { background: #ecfdf5; color: #047857; border: 1px solid #d1fae5; }
+.pill-rose { background: #fff1f2; color: #be123c; border: 1px solid #ffe4e6; }
+
+/* Linha do Tempo de Experiências */
+.timeline {
+    border-left: 3px solid #e2e8f0;
+    padding-left: 32px;
+    margin-top: 20px;
+}
+
+.job-slot {
+    margin-bottom: 50px;
+    position: relative;
+}
+
+.job-slot::before {
+    content: '';
+    position: absolute;
+    left: -39px;
+    top: 6px;
+    width: 12px;
+    height: 12px;
+    background: #ffffff;
+    border: 3px solid #2563eb;
+    border-radius: 50%;
+}
+
+.job-company {
+    font-size: 1.35rem;
+    font-weight: 800;
+    color: var(--text-main);
+    margin: 0;
+}
+
+.job-role {
+    font-size: 1.05rem;
+    font-weight: 600;
+    color: #2563eb;
+}
+
+.job-period {
+    font-size: 0.88rem;
+    font-weight: 600;
+    color: #64748b;
+    background: #f8fafc;
+    padding: 4px 12px;
+    border-radius: 20px;
+    border: 1px solid #e2e8f0;
+}
+
+.job-desc {
+    margin-top: 14px;
+    color: #475569;
+    font-size: 1rem;
+    line-height: 1.7;
+}
+
+.job-desc ul {
+    padding-left: 20px;
+    margin: 0;
+}
+
+.job-desc li {
+    margin-bottom: 8px;
+}
+
+.micro-skill-box {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    margin-top: 14px;
+}
+
+.micro-tag {
+    font-size: 0.78rem;
+    font-weight: 600;
+    background: #f1f5f9;
+    color: #475569;
+    padding: 3px 10px;
+    border-radius: 6px;
+}
+
+/* Cards de Educação e Cursos */
+.edu-box {
+    background: #f8fafc;
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+    padding: 20px;
+    margin-bottom: 16px;
+}
+
+.edu-title {
+    font-weight: 700;
+    font-size: 1.05rem;
+    color: var(--text-main);
+}
+
+.edu-meta {
+    font-size: 0.95rem;
+    color: #64748b;
+    margin-top: 4px;
+}
+
+.edu-box-link {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+}
+
+.edu-box-link:hover .edu-box {
+	background: #eaf0f5;
+}
+
+/* =========================================================
+   SUPER MOTOR DE IMPRESSÃO (PDF) - O DESIGN SYSTEM EM A4 - PDF EXECUTIVE VERSION 4.0
+   ========================================================= */
+@media print {
+
+    @page {
+        size: A4;
+        margin: 12mm;
+    }
+
+    html,
+    body {
+        background: #ffffff !important;
+        color: #1e293b !important;
+        font-size: 10.5pt !important;
+        line-height: 1.45 !important;
+        print-color-adjust: exact !important;
+        -webkit-print-color-adjust: exact !important;
+    }
+
+    .topbar {
+        display: none !important;
+    }
+
+    .resume-wrapper {
+        display: block !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        margin: 0 !important;
+        padding: 0 !important;
+        box-shadow: none !important;
+        border-radius: 0 !important;
+        background: #ffffff !important;
+    }
+
+    /* =====================================================
+       HEADER EXECUTIVO
+       ===================================================== */
+    .sidebar {
+        width: 100% !important;
+        background: #0f172a !important;
+        color: #ffffff !important;
+        padding: 22px 25px 2px 25px !important;
+        border: none !important;
+        border-radius: 0 !important;
+        margin: 0 0 20px 0 !important;
+        page-break-inside: avoid !important;
+    }
+
+    .profile-box {
+        display: none !important;
+    }
+
+    .user-name {
+
+        color: #ffffff !important;
+
+        font-size: 24pt !important;
+        font-weight: 800 !important;
+
+        text-align: center !important;
+
+        margin-bottom: 4px !important;
+    }
+
+    .user-designation {
+
+        color: #60a5fa !important;
+
+        text-align: center !important;
+
+        font-size: 12pt !important;
+        font-weight: 700 !important;
+
+        text-transform: uppercase !important;
+
+        letter-spacing: 1px !important;
+
+        margin-bottom: 18px !important;
+    }
+
+    .header-sep {
+        display: block !important;
+        border: none !important;
+        height: 1px !important;
+        background: rgba(255,255,255,.18) !important;
+        margin: 16px 0 18px 0 !important;
+    }
+
+	.contact-box{
+
+		display:grid !important;
+
+		grid-template-columns: 55% 45% !important;
+
+		column-gap:32px !important;
+
+		align-items:start !important;
+
+		margin-top:38px !important;
+	}
+
+	.contact-box-left{
+
+		display:flex !important;
+
+		flex-direction:column !important;
+
+		gap:10px !important;
+	}
+
+	.contact-box-right{
+
+		display:flex !important;
+
+		justify-content:flex-start !important;
+	}
+
+	.contact-box-right .card-soft{
+
+		min-width:258px !important;
+	}
+
+	.contact-row{
+
+		display:flex !important;
+
+		align-items:center !important;
+
+		gap:10px !important;
+
+		font-size:9pt !important;
+
+		color:#e2e8f0 !important;
+	}
+
+	.contact-row a {
+		color: #e2e8f0 !important;
+		text-decoration: none !important;
+	}
+
+	.contact-row i{
+
+		width:18px !important;
+
+		text-align:center !important;
+
+		font-size:11pt !important;
+	}
+
+	.sidebar-meta-container{
+
+		display:block !important;
+	}
+
+	.sidebar-meta-col {
+		margin: 0 !important;
+	}
+
+	.sidebar-meta-col:not(:first-child){
+
+		display:none !important;
+	}
+
+    .sidebar-heading {
+        color: #ffffff !important;
+        font-size: 9pt !important;
+        margin-bottom: 12px !important;
+        font-weight: 700 !important;
+    }
+
+    .sidebar .card-soft {
+
+        background: rgba(255,255,255,.06) !important;
+
+        border: 1px solid rgba(255,255,255,.08) !important;
+
+        color: #cbd5e1 !important;
+
+        padding: 10px 12px !important;
+
+        border-radius: 6px !important;
+
+        font-size: 8.5pt !important;
+
+        line-height: 1.45 !important;
+    }
+
+    .sidebar .card-soft strong {
+        color: #ffffff !important;
+    }
+
+    /* =====================================================
+       CONTEÚDO
+       ===================================================== */
+    .main-content {
+
+        width: 100% !important;
+
+        padding: 0 !important;
+
+        background: #ffffff !important;
+    }
+
+    .section {
+
+        margin-top: 0px !important;
+
+        margin-bottom: 28px !important;
+		
+		padding: 20px 0 0 0;
+
+        page-break-inside: avoid !important;
+
+        break-inside: avoid !important;
+    }
+
+    .section-title {
+
+        background: none !important;
+
+        border: none !important;
+
+        border-left: none !important;
+
+        border-radius: 0 !important;
+
+        padding: 0 0 8px 0 !important;
+
+        margin: 0 0 14px 0 !important;
+
+        font-size: 15pt !important;
+
+        font-weight: 800 !important;
+
+        color: #0f172a !important;
+
+        border-bottom: 2px solid #cbd5e1 !important;
+
+        page-break-after: avoid !important;
+    }
+
+    .section-title i {
+        color: #2563eb !important;
+    }
+
+    .summary-wrapper {
+
+        background: transparent !important;
+
+        border: none !important;
+
+        padding: 0 !important;
+
+        margin: 0 !important;
+    }
+
+    .summary-p {
+
+        font-size: 10pt !important;
+
+        line-height: 1.6 !important;
+
+        color: #334155 !important;
+    }
+
+    /* =====================================================
+       SKILLS
+       ===================================================== */
+    .skill-pill {
+        padding: 2px 8px !important;
+        margin: 0 3px 4px 0 !important;
+        font-size: 7.6pt !important;
+        border-radius: 4px !important;
+    }
+
+	.skill-category-card {
+		background: transparent !important;
+		border: none !important;
+		padding: 0 !important;
+		margin-top: 18px !important;
+		margin-bottom: 16px !important;
+	}
+
+	.skill-category-title {
+		font-size: 9.5pt !important;
+		font-weight: 800 !important;
+		color: #64748b !important;
+		text-decoration: underline;
+		margin-bottom: 8px !important;
+		padding-bottom: 4px !important;
+		border-bottom: 1px solid #e2e8f0 !important;
+		text-transform: uppercase !important;
+	}
+
+    /* =====================================================
+       EXPERIÊNCIA
+       ===================================================== */
+    .timeline {
+
+        border: none !important;
+
+        padding: 0 !important;
+
+        margin: 0 !important;
+    }
+
+    .job-slot {
+
+        border: none !important;
+
+        border-left: 3px solid #2563eb !important;
+
+        border-radius: 0 !important;
+
+        background: transparent !important;
+
+        padding: 0 0 0 14px !important;
+
+        margin-bottom: 20px !important;
+
+        page-break-inside: avoid !important;
+
+        break-inside: avoid !important;
+    }
+
+    .job-slot::before {
+        display: none !important;
+    }
+
+    .job-company {
+
+        font-size: 13pt !important;
+
+        font-weight: 800 !important;
+
+        margin-bottom: 2px !important;
+    }
+
+    .job-role {
+
+        font-size: 10pt !important;
+
+        font-weight: 700 !important;
+
+        margin-bottom: 4px !important;
+    }
+
+    .job-period {
+
+        border: none !important;
+
+        background: transparent !important;
+
+        padding: 0 !important;
+
+        font-size: 8.5pt !important;
+
+        color: #64748b !important;
+    }
+
+    .job-desc {
+
+        margin-top: 8px !important;
+
+        font-size: 9.5pt !important;
+
+        line-height: 1.45 !important;
+    }
+
+    .job-desc ul {
+
+        margin: 0 !important;
+
+        padding-left: 18px !important;
+    }
+
+    .job-desc li {
+
+        margin-bottom: 4px !important;
+    }
+
+    .micro-skill-box {
+
+        margin-top: 8px !important;
+
+        gap: 4px !important;
+    }
+
+    .micro-tag {
+
+        font-size: 7.5pt !important;
+
+        padding: 2px 7px !important;
+
+        background: #f1f5f9 !important;
+
+        border: none !important;
+    }
+
+    /* =====================================================
+       EDUCAÇÃO
+       ===================================================== */
+    .edu-box {
+
+        border: none !important;
+
+        background: transparent !important;
+
+        padding: 0 !important;
+
+        margin-bottom: 12px !important;
+
+        page-break-inside: avoid !important;
+    }
+
+    .edu-title {
+
+        font-size: 10pt !important;
+
+        font-weight: 700 !important;
+    }
+
+    .edu-meta {
+
+        font-size: 9pt !important;
+
+        color: #64748b !important;
+    }
+
+    /* =====================================================
+       CURSOS
+       ===================================================== */
+    .row,
+    .col-6 {
+
+        page-break-inside: avoid !important;
+
+        break-inside: avoid !important;
+    }
+
+    /* =====================================================
+       SEGURANÇA CONTRA QUEBRAS
+       ===================================================== */
+    h1,
+    h2,
+    h3,
+    h4 {
+
+        page-break-after: avoid !important;
+    }
+
+    p,
+    ul,
+    li {
+
+        orphans: 3;
+        widows: 3;
+    }
+}
+</style>
+<script src="assets/js/curriculo.js" defer></script>
+</head>
+<body>
+
+<div class="topbar d-flex justify-content-between align-items-center">
+    <span class="text-muted fw-medium small">
+        <i class="fa-solid fa-circle-info text-primary me-1"></i> 
+        <strong>PDF Engine 3.0</strong>
+    </span>
+    <div class="topbar-actions">
+        <select id="languageSelect" class="language-select" aria-label="Selecionar idioma">
+            <option value="pt">Português</option>
+            <option value="en">English</option>
+        </select>
+        <button id="exportPdfButton" class="btn-export" onclick="window.print()">
+            <i class="fa-solid fa-file-pdf"></i> <span>Exportar PDF</span>
+        </button>
+    </div>
+</div>
+
+<div id="resumeRoot"></div>
+
+</body>
+</html>
