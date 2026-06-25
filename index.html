@@ -3,6 +3,11 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+<link rel="manifest" href="site.webmanifest">
+
 <title>Filipe Henrique Gonçalves - Senior Full Stack Engineer</title>
 
 <!-- Google Fonts (Inter) & FontAwesome -->
@@ -67,15 +72,86 @@ body {
     gap: 12px;
 }
 
-.language-select {
+.language-picker {
+    position: relative;
+    display: inline-block;
+}
+
+.language-picker__button {
     height: 44px;
-    min-width: 132px;
+    min-width: 152px;
     border: 1px solid #cbd5e1;
-    border-radius: 8px;
+    border-radius: 999px;
     background: #ffffff;
     color: #0f172a;
     font-weight: 600;
-    padding: 0 12px;
+    padding: 0 14px;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    box-shadow: 0 4px 12px rgba(15, 23, 42, 0.06);
+    transition: all 0.2s ease;
+}
+
+.language-picker__button:hover {
+    border-color: #94a3b8;
+    box-shadow: 0 8px 20px rgba(15, 23, 42, 0.09);
+}
+
+.language-picker__flag {
+    width: 20px;
+    height: 14px;
+    object-fit: cover;
+    border-radius: 2px;
+    box-shadow: 0 0 0 1px rgba(15, 23, 42, 0.08);
+}
+
+.language-picker__label {
+    flex: 1;
+    text-align: left;
+}
+
+.language-picker__caret {
+    color: #64748b;
+    font-size: 0.85rem;
+}
+
+.language-picker__menu {
+    position: absolute;
+    top: calc(100% + 8px);
+    right: 0;
+    min-width: 170px;
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+    box-shadow: 0 14px 36px rgba(15, 23, 42, 0.12);
+    padding: 6px;
+    display: none;
+    z-index: 1000;
+}
+
+.language-picker__menu.show {
+    display: block;
+}
+
+.language-picker__option {
+    width: 100%;
+    border: none;
+    background: transparent;
+    color: #0f172a;
+    border-radius: 8px;
+    padding: 10px 12px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    text-align: left;
+    cursor: pointer;
+    transition: background 0.15s ease;
+}
+
+.language-picker__option:hover,
+.language-picker__option.is-active {
+    background: #f8fafc;
 }
 
 /* Container Mestre */
@@ -848,10 +924,27 @@ body {
         <strong>PDF Engine 3.0</strong>
     </span>
     <div class="topbar-actions">
-        <select id="languageSelect" class="language-select" aria-label="Selecionar idioma">
-            <option value="pt">Português</option>
-            <option value="en">English</option>
-        </select>
+        <div class="language-picker" id="languagePicker">
+            <button id="languagePickerButton" class="language-picker__button" type="button" aria-haspopup="listbox" aria-expanded="false" aria-label="Selecionar idioma">
+                <img id="languagePickerFlag" class="language-picker__flag" src="https://cdn.jsdelivr.net/npm/country-flag-icons@1.5.7/3x2/BR.svg" alt="BR">
+                <span id="languagePickerLabel" class="language-picker__label">Português</span>
+                <i class="fa-solid fa-chevron-down language-picker__caret"></i>
+            </button>
+            <div class="language-picker__menu" id="languagePickerMenu" role="listbox" aria-label="Idiomas">
+                <button class="language-picker__option is-active" type="button" data-language="pt" role="option" aria-selected="true">
+                    <img class="language-picker__flag" src="https://cdn.jsdelivr.net/npm/country-flag-icons@1.5.7/3x2/BR.svg" alt="BR">
+                    <span>Português</span>
+                </button>
+                <button class="language-picker__option" type="button" data-language="en" role="option" aria-selected="false">
+                    <img class="language-picker__flag" src="https://cdn.jsdelivr.net/npm/country-flag-icons@1.5.7/3x2/US.svg" alt="US">
+                    <span>English</span>
+                </button>
+            </div>
+            <select id="languageSelect" class="visually-hidden" aria-label="Selecionar idioma">
+                <option value="pt">Português</option>
+                <option value="en">English</option>
+            </select>
+        </div>
         <button id="exportPdfButton" class="btn-export" onclick="window.print()">
             <i class="fa-solid fa-file-pdf"></i> <span>Exportar PDF</span>
         </button>
