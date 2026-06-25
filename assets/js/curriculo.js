@@ -2,6 +2,10 @@
     const DATA_URL = 'data/curriculo-filipe-v1.json';
     const LANGUAGE_STORAGE_KEY = 'curriculoLanguage';
     const DEFAULT_LANGUAGE = 'pt';
+    const LANGUAGE_CONFIG = {
+        pt: { label: 'Português', flag: 'https://cdn.jsdelivr.net/npm/country-flag-icons@1.5.7/3x2/BR.svg' },
+        en: { label: 'English', flag: 'https://cdn.jsdelivr.net/npm/country-flag-icons@1.5.7/3x2/US.svg' }
+    };
 
     function getInitialLanguage(data) {
         const savedLanguage = localStorage.getItem(LANGUAGE_STORAGE_KEY);
@@ -273,17 +277,68 @@ ${renderCourses(content.courses)}
 </div>`;
     }
 
+    function updateLanguagePicker(language) {
+        const pickerButton = document.getElementById('languagePickerButton');
+        const pickerFlag = document.getElementById('languagePickerFlag');
+        const pickerLabel = document.getElementById('languagePickerLabel');
+        const options = document.querySelectorAll('.language-picker__option');
+        const config = LANGUAGE_CONFIG[language] || LANGUAGE_CONFIG[DEFAULT_LANGUAGE];
+
+        if (!pickerButton || !pickerFlag || !pickerLabel) return;
+
+        pickerFlag.src = config.flag;
+        pickerFlag.alt = language.toUpperCase();
+        pickerLabel.textContent = config.label;
+
+        options.forEach(option => {
+            const isActive = option.getAttribute('data-language') === language;
+            option.classList.toggle('is-active', isActive);
+            option.setAttribute('aria-selected', String(isActive));
+        });
+    }
+
     function initialize(data) {
         const languageSelect = document.getElementById('languageSelect');
+        const pickerButton = document.getElementById('languagePickerButton');
+        const pickerMenu = document.getElementById('languagePickerMenu');
         const initialLanguage = getInitialLanguage(data);
 
+        if (!languageSelect) return;
+
         languageSelect.value = initialLanguage;
+        updateLanguagePicker(initialLanguage);
         renderResume(data, initialLanguage);
 
         languageSelect.addEventListener('change', event => {
             const language = event.target.value;
             localStorage.setItem(LANGUAGE_STORAGE_KEY, language);
+            updateLanguagePicker(language);
             renderResume(data, language);
+        });
+
+        pickerButton?.addEventListener('click', () => {
+            const isExpanded = pickerButton.getAttribute('aria-expanded') === 'true';
+            pickerButton.setAttribute('aria-expanded', String(!isExpanded));
+            pickerMenu?.classList.toggle('show', !isExpanded);
+        });
+
+        document.querySelectorAll('.language-picker__option').forEach(option => {
+            option.addEventListener('click', () => {
+                const language = option.getAttribute('data-language');
+                if (!language) return;
+
+                languageSelect.value = language;
+                languageSelect.dispatchEvent(new Event('change'));
+                pickerButton?.setAttribute('aria-expanded', 'false');
+                pickerMenu?.classList.remove('show');
+            });
+        });
+
+        document.addEventListener('click', event => {
+            if (!event.target.closest('.language-picker')) {
+                pickerButton?.setAttribute('aria-expanded', 'false');
+                pickerMenu?.classList.remove('show');
+            }
         });
     }
 
